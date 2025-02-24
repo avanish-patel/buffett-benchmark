@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/buffett-benchmark/static/css/main.e6c13ad2.css",
+    "main.js": "/buffett-benchmark/static/js/main.2ac5895f.js",
+    "static/js/453.896ef68b.chunk.js": "/buffett-benchmark/static/js/453.896ef68b.chunk.js",
+    "index.html": "/buffett-benchmark/index.html",
+    "main.e6c13ad2.css.map": "/buffett-benchmark/static/css/main.e6c13ad2.css.map",
+    "main.2ac5895f.js.map": "/buffett-benchmark/static/js/main.2ac5895f.js.map",
+    "453.896ef68b.chunk.js.map": "/buffett-benchmark/static/js/453.896ef68b.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.2ac5895f.js"
+  ]
+}
