@@ -162,6 +162,13 @@ const currencyFormatter = new Intl.NumberFormat('en-US', {
   currency: 'USD',
 }).format;
 
+const abbreviatedCurrencyFormatter = (value) => {
+  if (value >= 1e9) return `$${(value / 1e9).toFixed(1)}B`;
+  if (value >= 1e6) return `$${(value / 1e6).toFixed(1)}M`;
+  if (value >= 1e3) return `$${(value / 1e3).toFixed(1)}K`;
+  return `$${value}`;
+};
+
 export default function App() {
   return (
     <div>
@@ -170,6 +177,7 @@ export default function App() {
         <LineChart
           {...lineChartsParams}
           xAxis={[{ data: years, scaleType: 'time', valueFormatter: yearFormatter }]}
+          yAxis={[{ valueFormatter: abbreviatedCurrencyFormatter }]}
           series={lineChartsParams.series.map((series) => ({
             ...series,
             valueFormatter: (v) => (v === null ? '' : currencyFormatter(v)),
@@ -184,7 +192,7 @@ export default function App() {
           <ListItem>
             <Link target="_blank" href="https://www.berkshirehathaway.com/2024ar/2024ar.pdf">Berkshire Hathaway Annual Report 2024 (Page 14)</Link>
           </ListItem>
-          </List>
+        </List>
       </Box>
     </div>
   );
